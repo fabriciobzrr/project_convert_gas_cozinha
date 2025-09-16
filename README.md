@@ -1,7 +1,7 @@
 <h1 align="center"> Calculadora Gás de Cozinha 🗂️ </h1>
 
 <p align="center">
-Projeto desenvolvido por <a href="https://github.com/fabriciobzrr" target="_blank">Fabricio Bezerra</a> com o propósito de criar uma calculadora que calcula o consumo de gás de cozinha através de botijão de gás.
+Projeto desenvolvido por <a href="https://github.com/fabriciobzrr" target="_blank">Fabricio Bezerra</a> com o propósito de criar uma calculadora que calcula o consumo de gás de cozinha através do tempo de uso do forno, do consumo do queimador do fogão, da capacidade e preço do botijão de gás.
 </p>
 
 <p align="center">
