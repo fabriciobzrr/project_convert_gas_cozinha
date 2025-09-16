@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/scripts.js" defer></script>
+    <title>Gás de Cozinha</title>
+  </head>
+  <body>
+    <header>
+      <div class="main-logo">
+        <h1 class="main-title">Calculadora <span>Gás de Cozinha</span></h1>
+        <img src="/img/logo.png" alt="Logo do projeto" />
+      </div>
+    </header>
+
+    <main>
+      <div class="char-image">
+        <img src="img/char.png" alt="" />
+      </div>
+      <div class="container">
+        <form>
+          <div class="input-group">
+            <label for="usage-time">Tempo de uso (em minutos)</label>
+            <div class="input-group-style">
+              <input
+                type="text"
+                name="usage-time"
+                id="usage-time"
+                placeholder="0"
+                required
+              /><i class="bi bi-clock-history"></i>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="burner-consumption"
+              >Consumo do queimador (em KG/h)</label
+            >
+            <div class="input-group-style">
+              <input
+                type="text"
+                name="burner-consumption"
+                id="burner-consumption"
+                placeholder="0"
+                required
+              /><i class="bi bi-fire"></i>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-style">
+              <select name="capacity" id="capacity">
+                <option value="" selected disabled hidden>
+                  Selecione o peso
+                </option>
+                <option value="13KG">13</option>
+                <option value="45KG">45</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="price">Preço do Botijão (em R$)</label>
+            <div class="input-group-style">
+              <input type="text" name="price" id="price" placeholder="0" /><i
+                class="bi bi-cash-coin"
+              ></i>
+            </div>
+          </div>
+          <button type="submit">Calcular consumo</button>
+        </form>
+
+        <footer id="footer-result" class="footer-section">
+          <span id="description">Gasto em R$ em 60 minutos de uso</span>
+          <p id="result">R$ 9,99</p>
+          <!-- <p id="description">do valor total do botijão R$ 999,99</p> -->
+        </footer>
+      </div>
+    </main>
+
+    <footer class="my-footer">
+      <p>Feito por <a href="#">Fabricio Bezerra</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-primary-color: #01011b;
+  --main-secondary-color: #171727;
+  --bg-primary-color: #0c0831;
+  --bg-secondary-color: #131122;
+  --footer-show-color: #ffffff;
+  --button-color: #1100ff;
+  --primary-color: #ffbb00;
+  --light-color: #ffffff;
+  --dark-color: #000000;
+  --dark-color-tp: #00000070;
+  --on-focus-color: #259c25;
+  --input-color: #dddddd;
+  --button-hover-color: #d6d6d6;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Poppins;
+  background: linear-gradient(
+    to bottom,
+    var(--main-primary-color),
+    var(--main-secondary-color)
+  );
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Cabeçalho e logo */
+
+header .main-logo {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-logo img {
+  width: 180px;
+  height: 150px;
+  opacity: 0.8;
+}
+
+.main-title {
+  text-align: right;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--light-color);
+  font-weight: bolder;
+}
+
+.main-title span {
+  display: block;
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+/* Formulário calculadora */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.char-image {
+  text-align: center;
+}
+
+.char-image img {
+  width: 450px;
+}
+
+.container {
+  width: 450px;
+  background-color: var(--bg-primary-color);
+  box-shadow: 0 0 8px var(--dark-color-tp);
+  border-radius: 0.5rem;
+}
+
+form {
+  padding: 2rem;
+}
+
+form .input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-secondary-color);
+}
+
+.input-group-style i {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  color: var(--primary-color);
+}
+
+.input-group label {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 1rem 1rem;
+  outline: 0;
+  background-color: transparent;
+  background-color: var(--bg-secondary-color);
+  border-color: transparent;
+  color: var(--input-color);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.input-group select option {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.input-group input:focus {
+  border-bottom: 2px solid var(--on-focus-color);
+  padding-left: 1.3rem;
+}
+
+.input-group select:focus {
+  border-bottom: 2px solid var(--on-focus-color);
+}
+
+.input-group input::placeholder,
+.input-group select {
+  color: var(--primary-color);
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  background: url("/img/chevron-down.svg") no-repeat;
+  background-position: calc(100% - 0.5rem) center !important;
+
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.input-group-style:focus {
+  padding-left: 1.3rem;
+}
+
+/* Mostrar resultados */
+
+.footer-section {
+  display: none;
+  text-align: center;
+  background-color: var(--footer-show-color);
+  padding: 2rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.footer-section #description {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--dark-color);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.footer-section #result {
+  font-size: 3rem;
+  margin: 1rem 0;
+  line-height: 1;
+  font-weight: bolder;
+  color: var(--primary-color);
+}
+
+.show-results {
+  display: block;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  margin: 2rem auto 0;
+  padding: 1.5rem 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: var(--button-color);
+  border: none;
+  color: var(--light-color);
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--dark-color-tp);
+  transition: 0.3s;
+  border-radius: 0.5rem;
+}
+
+form button:hover {
+  background-color: var(--button-hover-color);
+  color: var(--dark-color);
+}
+
+/* Rodapé */
+
+footer.my-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+footer.my-footer p {
+  color: var(--light-color);
+  text-align: center;
+}
